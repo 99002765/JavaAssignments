@@ -49,10 +49,11 @@ public class StudentServiceImpl implements StudentService {
 		return studentRepository.findAll();
 	}
 
-//	@Override
-//	public List<Student> findByAge(int age) {
-//		// TODO Auto-generated method stub
-//		return studentRepository.findByAge(age);
-//	}
+	
+	@Override
+	public List<Student> findByAge(int age) {
+		// TODO Auto-generated method stub
+		return studentRepository.findByAge(age);
+	}
 
 }

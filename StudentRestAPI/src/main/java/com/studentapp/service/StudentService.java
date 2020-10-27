@@ -17,5 +17,5 @@ public interface StudentService {
 	List<Student> getStudentByDept(String dept) throws StudentNotFoundException;
 	//Jpql
 	//@Query()
-	//List<Student> findByAge(int age);
+	List<Student> findByAge(int age);
 }

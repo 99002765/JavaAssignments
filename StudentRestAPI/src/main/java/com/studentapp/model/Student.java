@@ -9,17 +9,25 @@ public class Student {
 	@Id
 	Integer studentId;
 	String name,department;
+	Integer age;
+	public Student(Integer studentId, String name, String department, Integer age, Address address) {
+		super();
+		this.studentId = studentId;
+		this.name = name;
+		this.department = department;
+		this.age = age;
+		this.address = address;
+	}
 	Address address;
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Student(Integer studentId, String name, String department, Address address) {
-		super();
-		this.studentId = studentId;
-		this.name = name;
-		this.department = department;
-		this.address = address;
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 	public Integer getStudentId() {
 		return studentId;
@@ -47,7 +55,8 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-		return "Student [studentId=" + studentId + ", name=" + name + ", department=" + department + ", address="
-				+ address + "]";
+		return "Student [studentId=" + studentId + ", name=" + name + ", department=" + department + ", age=" + age
+				+ ", address=" + address + "]";
 	}
+	
 }

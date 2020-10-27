@@ -14,6 +14,6 @@ public interface StudentRepository extends MongoRepository<Student, Integer>{
 	List<Student> findByAddressCity(String city) throws StudentNotFoundException;
 	List<Student> findByDepartment(String dept) throws StudentNotFoundException;
 	//Jpql
-//	@Query()
-	//List<Student> findByAge(int age);
+	@Query("{'age':{$lt: ?0}}")
+	List<Student> findByAge(int age);
 }

@@ -49,4 +49,9 @@ public class StudentController {
 		studentService.deleteStudent(id);
 		return true;
 	}
+	@GetMapping("/students-by-age/{age}")
+	ResponseEntity<List<Student>> findByAge(@PathVariable("age")int age){
+		List<Student> students= studentService.findByAge(age);
+		return ResponseEntity.ok(students);
+	}
 }
